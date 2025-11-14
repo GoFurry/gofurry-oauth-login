@@ -1,0 +1,31 @@
+# 节点名称, 用于初始化雪花算法
+cluster_id : 1
+
+# 服务器基本配置
+server:
+  app_name: "GoFurry" # 名称
+  memory_limit: 1 # 服务器内存限制
+  ip_address: "127.0.0.1" # 服务器ip
+  port: "50056" # 服务器端口
+
+# 日志
+log:
+  log_rotation_count: 10 # 日志保存个数
+  log_path: "var/log/nova/log" # 日志保存路径
+  log_level: "debug" # 日志保存级别
+  log_choke_length: 1000 # 日志流长度
+
+# etcd
+etcd:
+  etcd_host: "127.0.0.1"
+  etcd_port: "2379"
+  etcd_key: "github-oauth-service"
+
+# github三方
+github:
+  client_id: "Ov23lib7uBLsrTUEa9Po" # OAuth客户端id
+  client_secret: "13e3dec4ef3dcd0a3d6e09aa862919d78b2f4820" # 密钥
+  redirect_url: "http://127.0.0.1:9990/oauth/callback/github" # 请求地址
+
+proxy:
+  url: "http://127.0.0.1:7897" # 代理服务器地址
